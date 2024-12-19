@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #00bfff; /* Texte en bleu clair pour le mode clair */
+            background-color: #d3d3d3; /* Fond gris clair */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: background-color 0.5s, color 0.5s;
+            background: url('https://images.alphacoders.com/135/thumb-1920-1358310.png') repeat top left;
+            background-size: cover;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(211, 211, 211, 0.9); /* Fond gris clair semi-transparent */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: auto;
+            transition: background-color 0.5s;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3em; /* Agrandi pour "Home" */
+            color: #00bfff; /* Titre en bleu clair pour le mode clair */
+        }
+
+        button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #00bfff; /* Bouton bleu clair */
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        nav {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(211, 211, 211, 0.9); /* Fond gris clair semi-transparent */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00bfff; /* Liens en bleu clair */
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: rgba(200, 200, 200, 0.8); /* Fond des liens au survol */
+            border-radius: 5px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            background-color: rgba(211, 211, 211, 0.9); /* Fond gris clair semi-transparent */
+            padding: 10px;
+            border-radius: 5px;
+            color: #00bfff; /* Texte en bleu clair */
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* Mode sombre */
+        .dark-mode {
+            background-color: #000000; /* Fond noir en mode sombre */
+            color: #b22222; /* Texte en rouge foncé */
+        }
+
+        .dark-mode .container {
+            background-color: rgba(0, 0, 0, 0.9); /* Fond noir plus transparent */
+        }
+
+        .dark-mode h2 {
+            background-color: rgba(85, 85, 85, 0.9); /* Fond sombre semi-transparent */
+            color: #b22222; /* Texte en rouge foncé */
+        }
+
+        .dark-mode button {
+            background-color: #b22222; /* Bouton rouge foncé */
+        }
+
+        .dark-mode nav {
+            background-color: rgba(85, 85, 85, 0.9); /* Fond sombre semi-transparent */
+        }
+
+        .dark-mode nav a {
+            color: #b22222; /* Liens en rouge foncé */
+        }
+
+        .dark-mode nav a:hover {
+            background-color: rgba(102, 102, 102, 0.8); /* Fond des liens au survol */
+        }
+
+        .dark-mode h1 {
+            color: #b22222; /* Titre principal en rouge foncé */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a href="#experience">Expérience</a>
+        <a href="#education">Formation</a>
+        <a href="#skills">Compétences</a>
+        <a href="#passions">Passions</a>
+    </nav>
+
+    <header>
+        <h1>Jouassard Kylian</h1> <!-- Titre principal -->
+        <button id="toggleButton">Mode Sombre</button>
+        <p>Email: Vivelesmerguez@gmail.com | Téléphone: 0123456789</p>
+        <p>Adresse: 11 rue jett , Ascent, Valorant</p>
+    </header>
+
+    <section id="experience">
+        <h2>Expérience Professionnelle</h2>
+        <p><strong>Poste actuel :</strong> Alternant chez SB2I</p>
+        <p><strong>Stage :</strong> Appel médical option kinésithérapeute</p>
+        <p><strong>Description des responsabilités et réalisations:</strong> Télemaintenance, réalisation de préstation et d'installation d'équipement ect..</p>
+    </section>
+
+    <section id="education">
+        <h2>Formation</h2>
+        <p><strong>Diplôme obtenu :</strong> Bac STI2D option SIN, Brevet des collèges Mention BIEN.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Compétences</h2>
+        <ul>
+            <li>À l'écoute, adaptation facile</li>
+            <li>Autonome / travail en équipe</li>
+            <li>Persévérant</li>
+            <li>Informatique : codage Python, HTML, adressage IP, montage vidéo, installation d'OS</li>
+        </ul>
+    </section>
+
+    <section id="passions">
+        <h2>Passions</h2>
+        <ul>
+            <li>Automobile / drift / sports mécaniques.</li>
+            <li>Sport / Foot / esport / musculation</li>
+            <li>Informatique / jeux vidéo</li>
+        </ul>
+    </section>
+</div>
+
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+    let isDarkMode = false;
+
+    toggleButton.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        document.body.classList.toggle('light-mode', !isDarkMode);
+        toggleButton.textContent = isDarkMode ? 'Mode Clair' : 'Mode Sombre';
+    });
+</script>
+
+</body>
+</html>
